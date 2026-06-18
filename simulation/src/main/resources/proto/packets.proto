@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package org.simulation.proto;
+
+option java_package = "org.simulation.proto.generated";
+option java_outer_classname = "SimulationPackets";
+
+
+
+
+message TranslationRequest {
+  bytes request_id = 1;
+  string text = 2;
+  string target_lang = 3;
+  string module = 4;
+}
+
+message TranslationResult {
+  bytes request_id = 1;
+  string result = 2;
+}
+
+message PacketWrapper {
+  oneof payload {
+    TranslationRequest translationRequest = 1;
+    TranslationResult translationResult = 2;
+  }
+}

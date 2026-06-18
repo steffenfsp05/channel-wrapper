@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package org.transport.proto;
+
+option java_package = "org.pytenix.proto.generated";
+option java_outer_classname = "TransportPackets";
+
+
+
+
+
+message PacketEnvelope {
+  int32 packetId = 1;
+  bytes payload = 2;
+}
+message PacketBatch {
+  repeated PacketEnvelope packets = 1;
+}
+
+
+message BasePacketWrapper {
+  oneof payload {
+    PacketEnvelope packetEnvelope = 1;
+      PacketBatch packetBatch = 2;
+  }
+}
