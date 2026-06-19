@@ -12,6 +12,13 @@ target/
 *.iml
 *.ipr
 
+# IntelliJ-Ordner und Einstellungsdateien
+.idea/
+out/
+
+# Alle target-Ordner (egal ob im Root oder in den Modulen)
+**/target/
+
 ### Eclipse ###
 .apt_generated
 .classpath
