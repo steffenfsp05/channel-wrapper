@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>4.35.1</version>
+            <version>4.30.2</version>
             <scope>compile</scope>
         </dependency>
 
@@ -67,7 +67,7 @@
 
                 <configuration>
                     <protoc kind="binary-maven">
-                        <version>4.35.1</version>
+                        <version>4.30.2</version>
                     </protoc>
                 </configuration>
 
